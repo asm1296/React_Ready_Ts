@@ -1,0 +1,27 @@
+@import 'variables';
+
+@mixin btnBlock {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 6px 10px;
+    background-color: $btnBgColor;
+    border:0.5px solid $btnBorderColor;
+    border-color: $btnBorderColor;
+    font-size: 0.7em;
+    &:hover{
+        background-color: white;
+        color: $btnBorderColor;
+    }    
+}
+
+@mixin mQs($width){
+    @media screen and (min-width:$width){
+        @content
+    }
+};
+@mixin mQmax($width){
+    @media screen and (max-width:$width){
+        @content
+    }
+}

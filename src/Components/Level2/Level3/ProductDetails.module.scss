@@ -1,0 +1,28 @@
+@import '../../../mixins';
+@import '../../../variables';
+
+.card{
+    margin: 10px 14%;  //10px 5px
+    border: 0.2px solid grey;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 70%;  //250px
+    
+    img{
+        width: 100%;
+    }
+    .container{
+        padding: 2px 8px;
+        text-align: center;
+        button{
+            @include btnBlock;
+            width: 100%;
+            margin-bottom: 2px;
+            @include mQs(400px){
+                padding: 3px 10px !important;
+            }
+        }
+        h2{
+            color: $btnBgColor;
+        }
+    }
+}

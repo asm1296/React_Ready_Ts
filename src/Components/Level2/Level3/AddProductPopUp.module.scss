@@ -1,0 +1,79 @@
+@import '../../../mixins';
+@import '../../../variables';
+
+.container{
+    position: absolute;
+    top: 0;
+   bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+   justify-content: center;
+   align-items: center;
+    background-color: rgba(0,0,0,0.3);
+    
+}
+.insideContainer{
+    padding: 20;
+    background: #fff;
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 300px;
+    min-width:300px;
+    @include mQmax(716px){
+        min-width: 270px;
+    }
+    position: relative;
+    
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    justify-self: center;
+    label{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        justify-self: start;
+        align-self: center;
+        padding: 14px 20px;
+        //margin: 2% 15%;
+        
+    }
+    input{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        justify-self: center;
+        align-self: center;
+        width: 68%;
+        padding: 14px 20px;
+        //margin: 2% 12%;
+        border: thin solid #000;
+        
+    }
+    h3{
+        margin: 0%;
+        padding: 8px 12px;
+        color: rgba(8, 201, 201, 0.911);
+    }
+    span{
+        cursor: pointer;
+        position: absolute;
+        top: 7%;
+        right: 0%;
+        padding: 12px 16px;
+        opacity: 0.3;
+        transform: translate(0%, -50%);
+        &:hover{
+            opacity: 1;
+        }
+    }
+    button{
+        @include btnBlock;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        justify-self: center;
+        align-self: center;
+        width: 30%;
+        margin: 8px 12px;
+    }
+
+ 
+}
